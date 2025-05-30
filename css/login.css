@@ -29,7 +29,6 @@ main{
 }
 
 .login{
-    border: 1px solid black;
     padding: 10px;
     width: 300px;
 }
@@ -38,4 +37,19 @@ input{
     width: 270px;
     height: 30px;
     border-radius: 20px;
+}
+
+.botoes{
+    display: flex;
+    margin-top: 40px;
+    text-align: center;
+    justify-content: space-around;
+}
+
+button{
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: rgb(79, 77, 77);
+    color: white;
 }
