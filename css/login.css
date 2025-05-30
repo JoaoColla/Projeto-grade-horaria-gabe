@@ -20,3 +20,22 @@ body{
     padding: 0;
     overflow-x: hidden;
 }
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.login{
+    border: 1px solid black;
+    padding: 10px;
+    width: 300px;
+}
+
+input{
+    width: 270px;
+    height: 30px;
+    border-radius: 20px;
+}
