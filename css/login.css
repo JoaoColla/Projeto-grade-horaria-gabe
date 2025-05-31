@@ -25,7 +25,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10%;
+    margin-top: 50px;
 }
 
 .login{
@@ -37,6 +37,8 @@ input{
     width: 270px;
     height: 30px;
     border-radius: 20px;
+    font-size: 16px;
+    padding-left: 20px;
 }
 
 .botoes{
@@ -52,4 +54,16 @@ button{
     border-radius: 10px;
     background-color: rgb(79, 77, 77);
     color: white;
+}
+
+.caixasTxt label{
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.caixasTxt{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 30px;
 }
