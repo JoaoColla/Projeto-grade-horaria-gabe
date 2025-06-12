@@ -1,3 +1,17 @@
+header{
+  background-color: black; /* Cor de fundo preta */
+width: 100%; /* Ocupa toda a largura */
+margin: 0; /* Remove margens */
+padding: 0; /* Remove paddings internos (ou ajuste conforme necessário) */
+border: 1px solid black;
+color: white;
+height: 150px;
+display: flex; /* Ativa o modelo flexbox */
+justify-content: center; /* Centraliza o conteúdo horizontalmente */
+align-items: center; /* Centraliza o conteúdo verticalmente */
+
+}
+
 body {
   font-family: Arial, sans-serif;
   padding: 20px;
