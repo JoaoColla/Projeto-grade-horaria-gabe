@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Grade Escolar</title>
+  <link rel="stylesheet" href="./css/pedagogos.css">
+</head>
+
+<header><h1>pedagogos</h1>
+</header>
+<br>
+<br><br><br><br>
+<body>
+
+  <div class="form-container">
+    <label for="turma">Turma:</label>
+    <select id="turma">
+      <option value="">Selecione</option>
+      <option value="1° DS">1° DS</option>
+      <option value="2° DS">2° DS</option>
+      <option value="3° DS">3° DS</option>
+      <option value="1° ADM">1° ADM</option>
+      <option value="2° ADM">2° ADM</option>
+      <option value="3° ADM">3° ADM</option>
+      <option value="1° PORTOS">1° PORTOS</option>
+      <option value="2° PORTOS">2° PORTOS</option>
+      <option value="3° PORTOS">3° PORTOS</option>
+      <option value="1° BIO ECONOMIA">1° BIO ECONOMIA</option>
+      <option value="2° BIO ECONOMIA">2° BIO ECONOMIA</option>
+      <option value="1° Regular Exatas">1° Regular Exatas</option>
+      <option value="2° Regular Exatas">2° Regular Exatas</option>
+      <option value="3° Regular Exatas">3° Regular Exatas</option>
+      <option value="1° Regular Humanas">1° Regular Humanas</option>
+      <option value="2° Regular Humanas">2° Regular Humanas</option>
+      <option value="3° Regular Humanas">3° Regular Humanas</option>
+    </select>
+
+    <label for="turno">Turno:</label>
+    <select id="turno">
+      <option value="">Selecione</option>
+      <option value="Manhã">Manhã</option>
+      <option value="Tarde">Tarde</option>
+      <option value="Noite">Noite</option>
+    </select>
+  </div>
+
+  <table id="grade">
+    <thead>
+      <tr>
+        <th>Dia/Aula</th>
+        <th>1ª Aula</th>
+        <th>2ª Aula</th>
+        <th>3ª Aula</th>
+        <th>4ª Aula</th>
+        <th>5ª Aula</th>
+        <th>6ª Aula</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Segunda</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+      </tr>
+      <tr>
+        <th>Terça</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+      </tr>
+      <tr>
+        <th>Quarta</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+      </tr>
+      <tr>
+        <th>Quinta</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+      </tr>
+      <tr>
+        <th>Sexta</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="text-align: center; margin-top: 15px;">
+    <button id="salvarGradeBtn">Salvar Grade Horária</button>
+  </div>
+
+  <div class="avisos-container" style="margin-top: 30px;">
+    <label for="avisos">Avisos:</label><br>
+    <textarea id="avisos" placeholder="Digite os avisos aqui..."></textarea>
+    <button id="salvarAvisosBtn">Salvar Avisos</button>
+  </div>
+
+  <script src="./js/pedagogos.js"></script>
+</body>
+</html>
