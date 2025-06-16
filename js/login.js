@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     profBtn.addEventListener('click', function(){
         if (inputNome.value === 'ped@gogos' && inputSenha.value === '123'){ 
-            window.location.href = 'pedagogos.html';
+            window.location.href = './pedagogos/index.html';
         } else {
             alert('Opa, há algo de errado! Por favor, tente novamente.');
             
@@ -16,6 +16,6 @@ document.addEventListener('DOMContentLoaded', function(){
     });
 
     alunoBtn.addEventListener('click', function(){
-        window.location.href = 'gradeHoraria.html';
+        window.location.href = './alunos/index.html';
     });
 });
