@@ -67,3 +67,24 @@ button{
     justify-content: space-around;
     gap: 30px;
 }
+
+.suporte-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #25D366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.suporte-button:hover {
+  background-color: #1eb64d;
+  transform: scale(1.05);
+}
