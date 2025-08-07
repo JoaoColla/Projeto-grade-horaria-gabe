@@ -323,3 +323,126 @@ document.addEventListener('DOMContentLoaded', () => {
         carregarAreaAlunos();
     }
 });
+
+// ... (código existente) ...
+
+// Funções específicas para a página de pedagogos
+function carregarAreaPedagogos() {
+    const pedagogosSection = document.getElementById('pedagogos-section');
+    
+    if (!pedagogosSection) return; // Se não estiver na página de pedagogos, sai da função
+    
+    pedagogosSection.innerHTML = `
+        <h2>Área dos Pedagogos</h2>
+        
+        <div id="grade-form">
+            <h3>Cadastrar Grade Horária</h3>
+            <div class="form-group">
+                <label for="turma-grade">Turma:</label>
+                <select id="turma-grade">
+                    ${turmas.map(turma => `<option value="${turma}">${turma}</option>`).join('')}
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="turno-grade">Turno:</label>
+                <select id="turno-grade">
+                    ${turnos.map(turno => `<option value="${turno}">${turno}</option>`).join('')}
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Grade Horária:</label>
+                <table id="tabela-grade">
+                    <thead>
+                        <tr>
+                            <th>Dia/Hora</th>
+                            <th>Aula 1</th>
+                            <th>Aula 2</th>
+                            <th>Aula 3</th>
+                            <th>Aula 4</th>
+                            <th>Aula 5</th>
+                            <th>Aula 6</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Segunda</td>
+                            ${Array(6).fill(`<td><input type="text" class="aula-input" list="lista-professores"></td>`).join('')}
+                        </tr>
+                        <tr>
+                            <td>Terça</td>
+                            ${Array(6).fill(`<td><input type="text" class="aula-input" list="lista-professores"></td>`).join('')}
+                        </tr>
+                        <tr>
+                            <td>Quarta</td>
+                            ${Array(6).fill(`<td><input type="text" class="aula-input" list="lista-professores"></td>`).join('')}
+                        </tr>
+                        <tr>
+                            <td>Quinta</td>
+                            ${Array(6).fill(`<td><input type="text" class="aula-input" list="lista-professores"></td>`).join('')}
+                        </tr>
+                        <tr>
+                            <td>Sexta</td>
+                            ${Array(6).fill(`<td><input type="text" class="aula-input" list="lista-professores"></td>`).join('')}
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <!-- Datalist para sugestões de professores -->
+                <datalist id="lista-professores">
+                    ${professores.map(prof => `<option value="${prof}">`).join('')}
+                </datalist>
+
+            </div>
+            
+            <button id="salvar-grade">Salvar Grade</button>
+        </div>
+        
+        <div id="avisos-form">
+            <h3>Cadastrar Avisos</h3>
+            <div class="form-group">
+                <label for="turma-aviso">Turma:</label>
+                <select id="turma-aviso">
+                    ${turmas.map(turma => `<option value="${turma}">${turma}</option>`).join('')}
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="turno-aviso">Turno:</label>
+                <select id="turno-aviso">
+                    ${turnos.map(turno => `<option value="${turno}">${turno}</option>`).join('')}
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="texto-aviso">Aviso:</label>
+                <textarea id="texto-aviso" rows="3"></textarea>
+            </div>
+            
+            <button id="salvar-aviso">Salvar Aviso</button>
+        </div>
+        
+        <div id="faltas-form">
+            <h3>Registrar Faltas de Professores</h3>
+            <div class="form-group">
+                <label>Selecione os professores faltantes hoje:</label>
+                ${professores.map(prof => `
+                    <div>
+                        <input type="checkbox" id="falta-${prof.replace(' ', '-')}" value="${prof}">
+                        <label for="falta-${prof.replace(' ', '-')}">${prof}</label>
+                    </div>
+                `).join('')}
+            </div>
+            
+            <button id="salvar-faltas">Registrar Faltas</button>
+        </div>
+    `;
+
+    // Event listeners para os botões
+    document.getElementById('salvar-grade')?.addEventListener('click', salvarGrade);
+    document.getElementById('salvar-aviso')?.addEventListener('click', salvarAviso);
+    document.getElementById('salvar-faltas')?.addEventListener('click', salvarFaltas);
+}
+
+// ... (restante do código) ...
